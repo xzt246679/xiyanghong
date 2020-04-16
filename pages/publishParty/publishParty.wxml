@@ -1,0 +1,67 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">发布家庭餐
+      <image src='/img/return.png' mode='aspectFit' class='back' bindtap='navBack' style="padding:{{(navLH-16)/2}}px 0;top:{{(navH-48)/2}}rpx;"></image>
+    </view>
+  </view>
+
+  <scroll-view scroll-y="true" style="height:calc(100vh - {{navH}}px);padding:0 20rpx; width:710rpx;">
+    <view>
+      <textarea value="{{context}}" placeholder="请输入要发布的内容……" bindinput="getContext"></textarea>
+      <view class="images-view" style="display: flex;flex-flow: row wrap;">
+        <block wx:for="{{imageList}}" wx:key="img" wx:for-index="index">
+          <view style="position:relative;">
+            <image class="img" src=""></image>
+            <view class="del-btn" catchtap="delImg" data-index="{{index}}"><image class="icon" src="../../img/delete.png"></image></view>
+          </view>
+        </block>
+        <image wx:if="{{imageList.length<9}}" class="add-image" bindtap="addImage" src="../../img/add.png"></image>
+      </view>
+    </view>
+    
+    <view style="margin-top:50rpx;">
+      <view bindtap="getLocation" class="location">
+        <image class="icon" src="../../img/position.png" style="vertical-align: top;"></image>
+        <text>你在哪里</text>
+      </view>
+      <view bindtap="getPhone" class="location">
+        <image class="icon" src="../../img/dianhua.png" style="vertical-align: top;"></image>
+        <button class="phone-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">联系方式</button>
+      </view>
+    </view>
+
+    <view>
+      <view class="args-view">
+        <input value="{{num}}" class="args" bindinput="getNum" type="number"></input>
+        <view>请选择需要几人</view>
+      </view>
+      <view class="args-view">
+        <input value="{{price}}" class="args" bindinput="getPrice" type="digit"></input>
+        <view>请输入要支付的金额</view>
+      </view>
+      <!-- <view class="args-view">
+        <input value="{{date}}" class="args" bindinput="getDate"></input>
+        <view>请选择报名截止日期</view>
+      </view>
+      <view class="args-view">
+        <input value="{{time}}" class="args" bindinput="getTime"></input>
+        <view>请选择报名截止时间</view>
+      </view> -->
+
+      <view class="tui-picker-content args-view">
+        <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+          结束日期时间
+          <view class="tui-picker-detail args" style="width:340rpx;">
+            {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+            <image src="../../img/date.png" class="date-img"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view style="margin-top:10px;">
+      <button class="submit-btn" bindtap="submitParty">提交审核</button>
+    </view>
+  </scroll-view>
+
+</view>

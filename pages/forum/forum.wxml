@@ -1,0 +1,58 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">论坛
+    </view>
+  </view>
+
+  <view class="forum">
+    <scroll-view scroll-y="true" style="height:calc(100vh - {{navH}}px - 150rpx);background:#FFF;border-radius:32rpx 32rpx 0 0;">
+      <block wx:for="{{3}}" wx:key="f" wx:for-index="index">
+        <view class="forum-view">
+          <view class="publish-time">{{"一天前"}}</view>
+          <!-- 用户信息 -->
+          <view class="user-info">
+            <view class="avatar"><image src="../../img/logo.jpg"></image></view>
+            <view class="user-detail">
+              <view class="username tags">{{"username"}}</view>
+              <view class="tags" wx:if="{{index%2==0}}"><image src="../../img/ding.png" class="icon"></image></view>
+              <view class="tags" wx:if="{{index%3==0}}"><image src="../../img/re.png" class="icon"></image></view>
+              <view style="margin-top:8rpx;">
+                <image class="icon" src="../../img/vip.png"></image>
+                <view class="vip-level">{{3}}级</view>
+              </view>
+            </view>
+          </view>
+          <!-- 帖子标题 -->
+          <view class="title">{{"狗屎味儿的巧克力，一口一个它是巨香巨香的,巨香巨香的,巨香巨香的,巨香巨香的,巨香巨香的,巨香巨香的,巨香巨香的,巨香巨香的."}}</view>
+          <!-- 显示图片 -->
+          <view class="images" wx:if="{{true}}">
+            <view wx:if="{{1<=1}}" class="image-view">
+              <image class="big-pic" src="{{}}"></image>
+            </view>
+            <view style="display:flex;" wx:if="{{1<=5}}" wx:key="pic" wx:for-item="image" wx:for-index="i" class="image-view">
+              <image wx:for="{{3}}" class="small-pic" src="{{}}"></image>
+            </view>
+          </view>
+          <!-- 扩展部分 -->
+          <view style="margin-top:20rpx;">
+            <view class="extra-right">
+              <view class="ping"><image src="../../img/pinglun.png" class="icon"></image>{{554}}</view>
+              <view class="zan"><image src="../../img/dianzan.png" class="icon"></image>{{2545}}</view>
+            </view>
+            <view class="read">{{5487}}阅读</view>
+          </view>
+        </view>
+      </block>
+      <view bindtap="turnTo">跳转</view>
+    </scroll-view>
+    <view class="publish-btn" bindtap="goPublishForum"><image src="../../img/logo.jpg"></image></view>
+  </view>
+  <view class="bottom-dh">
+    <view class="{{tabbar==0?'tabbar-active':'tabbar'}}" style="margin-left:20rpx;" bindtap="changeTabbar" data-tabbar="0"><text>信息动态</text></view>
+    <view class="{{tabbar==1?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="1"><text>家庭餐</text></view>
+    <view class="{{tabbar==2?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="2"><text>论坛</text></view>
+    <view class="{{tabbar==3?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="3"><text>生活圈</text></view>
+    <view class="{{tabbar==4?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="4"><text>我的</text></view>
+  </view>
+</view>
+

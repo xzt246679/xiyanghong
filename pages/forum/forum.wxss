@@ -1,0 +1,92 @@
+
+page{
+  background-color: #E31C21;
+  color: #2c2b2b;
+}
+.forum{
+  background-color: #FFFFFF;
+  border-radius: 32rpx 32rpx 0 0;
+  padding: 20rpx;
+}
+.avatar{
+  width: 90rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+.avatar image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.user-detail{
+  display: inline-block;
+  margin-left: 11rpx;
+}
+.publish-time{
+  float: right;
+  color: rgb(151, 151, 151);
+  font-size: 25rpx;
+  margin-top: 3rpx;
+}
+.username{
+  font-size: 30rpx;
+  color: rgb(44,43,43);
+}
+
+.tags{
+  display: inline-block;
+}
+.vip-level{
+  display: inline-block;
+  font-size: 26rpx;
+  color: rgb(227,28,33);
+  margin-left: 6rpx;
+}
+
+.title{
+  width: 710rpx;
+  color: rgb(44,43,43);
+  font-size: 36rpx;
+  font-weight: bold;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 14rpx 0 20rpx 0;
+}
+
+.big-pic{
+  width: 710rpx;
+  height: 400rpx;
+  border: 0.1px solid red;
+}
+
+.small-pic{
+  flex: auto;
+  width: 227rpx;
+  height: 227rpx;
+  margin: 7rpx;
+  border: 0.1px solid red;
+}
+.extra-right{
+  float: right;
+  display: flex;
+  width: 264rpx;
+}
+
+.extra-right view{
+  flex: 1;
+  text-align: left;
+  font-size: 28rpx;
+  color: rgb(44,43,43);
+}
+.read{
+  color: rgb(151,151,151);
+}
+.forum-view{
+  margin-bottom: 55rpx;
+}

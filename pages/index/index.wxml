@@ -1,0 +1,55 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">夕阳红社区
+    </view>
+  </view>
+  <view style="border-radius:32rpx 32rpx 0 0;overflow:hidden;">
+    <scroll-view scroll-y="true" style="height:calc(100vh - {{navH}}px - 130rpx);background:#FFF;">
+      <view class="index">
+        <!-- 轮播图部分 -->
+        <view>
+          <swiper autoplay="true" indicator-dots="true">
+            <swiper-item>
+              <image wx:for="{{banner}}" src="{{item.pic}}" wx:key="pic"></image>
+            </swiper-item>
+          </swiper>
+        </view>
+
+        <!-- 地址 -->
+        <view>
+          <image class="icon" src=""></image>
+          <text>山东省天涯海角虚无缥缈A座</text>
+          <image class="icon" src="" bindtap="getLocation"></image>
+        </view>
+
+        <!-- 会员推荐 -->
+        <view>
+          <image class="vip-adv" src=""></image>
+        </view>
+
+        <!-- model -->
+        <view>
+          <view class="models">
+            <view wx:for="{{constant.length<2?1:constant.length/2}}" wx:key="model" wx:for-index="cols" style="display:flex;" wx:for-item="mod">
+              <view wx:for="{{2}}" class="model" wx:for-index="index">
+                <image src="{{constant[cols*2+index].pic}}" class="model-img"></image>
+                <view class="name">{{constant[cols*2+index].title}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        
+
+      </view>
+    </scroll-view>
+  </view>
+  <view style="height:130rpx;"></view>
+  <view class="bottom-dh">
+    <view class="{{tabbar==0?'tabbar-active':'tabbar'}}" style="margin-left:20rpx;" bindtap="changeTabbar" data-tabbar="0"><text>信息动态</text></view>
+    <view class="{{tabbar==1?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="1"><text>家庭餐</text></view>
+    <view class="{{tabbar==2?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="2"><text>论坛</text></view>
+    <view class="{{tabbar==3?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="3"><text>生活圈</text></view>
+    <view class="{{tabbar==4?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="4"><text>我的</text></view>
+  </view>
+</view>

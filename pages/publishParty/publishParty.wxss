@@ -1,0 +1,84 @@
+.args{
+  float: right;
+  width: 144rpx;
+  height: 54rpx;
+  border: 1rpx solid rgba(151,151,151,1);
+  border-radius: 8rpx;
+}
+
+.args-view{
+  margin-top: 10px;
+  height: 54rpx;
+  line-height: 54rpx;
+}
+
+textarea{
+  margin: 0 auto;
+  width: 710rpx;
+  height: 370rpx;
+  overflow-y: scroll;
+  margin-top: 20rpx;
+}
+
+.add-image{
+  width: 227rpx;
+  height: 227rpx;
+  margin: 10rpx 5rpx;
+}
+
+.img{
+  width: 227rpx;
+  height: 227rpx;
+  margin: 10rpx 5rpx;
+  border: 0.5px solid red;
+  flex-wrap: warp;
+}
+
+.del-btn{
+  background-color: rgba(19,19,19,0.6);
+  text-align: center;
+  width: 227rpx;
+  margin: 10rpx 5rpx;
+  position: absolute;
+  bottom: 10rpx;
+}
+
+.location{
+  border: 0.5px solid rgb(151,151,151);
+  display: inline-block;
+  border-radius: 6rpx;
+  padding: 5rpx 0;
+  height: 42rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+  font-size: 30rpx;
+  width: 184rpx;
+}
+
+.phone-btn{
+  height: 42rpx;
+  width: 142rpx;
+  padding: 0;
+  display: inline-block;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.date-img{
+  float: right;
+  margin-right: 3rpx;
+  width: 52rpx;
+  height: 52rpx;
+}
+
+.submit-btn{
+  width: 710rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  background: -webkit-repeating-linear-gradient(left,rgba(232, 71, 47, 1),rgba(227, 27, 32, 1));
+  color: rgba(255, 255, 255, 1);
+  font-size: 42rpx;
+  margin-top: 300rpx;
+  margin-bottom: 70rpx;
+}

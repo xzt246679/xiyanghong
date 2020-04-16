@@ -1,0 +1,41 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">家庭餐详情
+      <image src='/img/return.png' mode='aspectFit' class='back' bindtap='navBack' style="padding:{{(navLH-16)/2}}px 0;top:{{(navH-48)/2}}rpx;"></image>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" style="height:calc(100vh - {{navH}}px);">
+    <view style="height:20rpx;"></view>
+    <view class="detail">
+      <view class="phone">
+        <image class="icon" src="../../img/dianhua.png"></image>
+        <text> 电话</text>
+      </view>
+      <view class="user-info">
+        <image src="../../images/jiaqun@2x.png" class="avatar"></image>
+        <view class="username">{{"江户川"}}</view>
+      </view>
+      <view class="detail-view">
+        <view><image src="../../img/baoming.png" class="icon"></image><text> 需三人 已有20人报名</text></view>
+        <view style="margin-top:12rpx;"><image src="../../img/meirenkede.png" class="icon"></image><text> 每人需 30 元</text></view>
+        <view style="margin-top:12rpx;" class="share"><image src="../../img/share.png" class="icon"></image><text> 分享</text></view>
+        <view style="margin-top:12rpx;"><image src="../../img/jiezhishijian.png" class="icon"></image><text> 截至到 2月31日 25:00</text></view>
+      </view>
+    </view>
+
+    <view class="other-detail">
+      <view class="banners">
+        <image src="" class="banner"></image>
+        <image src="" class="banner"></image>
+        <view class="address">
+          <text>山东省潍坊市威尼斯金字塔A塔</text>
+        </view>
+        <view class="times">{{"刚刚"}}</view>
+      </view>
+    </view>
+
+    <view>
+      <button class="pay-btn">报名支付</button>
+    </view>
+  </scroll-view>
+</view>

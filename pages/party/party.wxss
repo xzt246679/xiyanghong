@@ -1,0 +1,118 @@
+/* pages/party/party.wxss */
+page{
+  background-color: #E31C21;
+  color: #2c2b2b;
+}
+.party{
+  width: 714rpx;
+  padding: 20rpx;
+  margin-top: 14rpx;
+  border-radius: 32rpx 32rpx 0 0;
+  background-color: #FFF;
+}
+
+.avatar image{
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.avatar{
+  width: 90rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.party-detail{
+  display: inline-block;
+  width: 604rpx;
+  margin-left: 16rpx;
+}
+
+.username{
+  font-size: 30rpx;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.tags{
+  display: inline-block;
+}
+
+.num{
+  border: 0.5px solid #E31C21;
+  border-radius: 20rpx;
+  height: 38rpx;
+  color: #E31C21;
+  display: inline-block;
+  padding: 0 20rpx;
+  line-height: 38rpx;
+  font-size: 24rpx;
+  margin-left: 22rpx;
+}
+
+.price{
+  border: 0.5px solid #FFAA45;
+  border-radius: 20rpx;
+  height: 38rpx;
+  color: #FFAA45;
+  display: inline-block;
+  padding: 0 20rpx;
+  line-height: 38rpx;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.title{
+  font-weight: bold;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.photos image{
+  width: 192rpx;
+  height: 192rpx;
+  flex: 1;
+}
+
+.photos{
+  width: 604rpx;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.address{
+  color: #A0A0A0;
+  font-size: 30rpx;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  overflow: hidden;
+  margin-bottom: 12rpx;
+}
+
+.time{
+  color: #979797;
+  font-size: 28rpx;
+}
+
+.share-btn, .showTime{
+  float: right;
+  font-size: 28rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+
+.publish-btn{
+  position: absolute;
+  right: 20rpx;
+  bottom: 130rpx;
+  overflow: hidden;
+  border-radius: 47rpx;
+}
+
+.publish-btn image{
+  width: 94rpx;
+  height: 94rpx;
+}
+

@@ -1,0 +1,152 @@
+/* pages/personaCenter/personaCenter.wxss */
+page{
+  background-color: #E31C21;
+  color: #2c2b2b;
+}
+.personal-center{
+  background-color: #FFFFFF;
+  border-radius: 32rpx 32rpx 0 0;
+  padding: 20rpx;
+}
+
+.avatar{
+  display: inline-block;
+  width: 126rpx;
+  height: 126rpx;
+  margin-right: 16rpx;
+  vertical-align: top;
+  border-radius: 50%;
+}
+
+.info{
+  position: relative;
+}
+
+.user-detail{
+  display: inline-block;
+}
+
+.nickname{
+  color: #333333;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.tel{
+  color: #999999;
+  font-size: 15px;
+}
+
+.certification-btn{
+  color: #E31C21;
+  border: 0.5px solid #E31C21;
+  border-radius: 8rpx;
+  text-align: center;
+  width: 150rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  padding: 6rpx 36rpx;
+  font-size: 12px;
+  margin-top: 7rpx;
+}
+
+.certification{
+  color: #999999;
+  border: 0.5px solid #999999;
+  border-radius: 8rpx;
+  text-align: center;
+  width: 150rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  padding: 6rpx 36rpx;
+}
+
+.right-btn{
+  background: -webkit-linear-gradient(left,#FF6E4F,#FB0016);
+  position: absolute;
+  width: 130rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 33rpx 0 0 33rpx;
+  font-size: 14px;
+  color: #FFF;
+  padding: 13rpx 35rpx;
+  margin-top: 50rpx;
+  right: 0;
+}
+
+.balance{
+  display: flex;
+  margin: 20rpx 0;
+}
+
+.left-view{
+  flex: auto;
+  width: 354rpx;
+  line-height: 152rpx;
+  text-align: center;
+  height: 172rpx;
+  border-right: 0.5px dotted #DDDDDD;
+}
+
+.right-view{
+  flex: auto;
+  width: 354rpx;
+  height: 172rpx;
+  border-left: 0.5px dotted #DDDDDD;
+  text-align: center;
+}
+
+.money{
+  font-size: 20px;
+}
+
+.goRight{
+  width: 66rpx;
+  height: 66rpx;
+  vertical-align: middle;
+  float: right;
+}
+
+.buyVip-btn{
+  width: 224rpx;
+  text-align: center;
+  height: 66rpx;
+  line-height: 66rpx;
+  color: #E3321E;
+  border: 0.5px solid #E3321E;
+  border-radius: 33rpx;
+  font-size: 14px;
+  margin: 25rpx auto;
+  margin-bottom: 9rpx;
+}
+
+.vip-tip{
+  font-size: 10px;
+  color: #999999;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.icon-vip{
+  width: 25rpx;
+  height: 26rpx;
+}
+
+.tip-pic{
+  width: 42rpx;
+  height: 42rpx;
+  vertical-align: middle;
+  margin-left: 0 18rpx 0 20rpx;
+}
+
+.inner-item{
+  margin: 14rpx;
+  height: 96rpx;
+}
+
+.item-name{
+  margin: 0 18rpx 0 20rpx;
+  display: inline-block;
+}

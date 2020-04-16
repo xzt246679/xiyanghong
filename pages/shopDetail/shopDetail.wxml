@@ -1,0 +1,135 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">商铺详情页
+      <image src='/img/return.png' mode='aspectFit' class='back' bindtap='navBack' style="padding:{{(navLH-16)/2}}px 0;top:{{(navH-48)/2}}rpx;"></image>
+    </view>
+  </view>
+
+  <view class="shop-detail-page">
+    <scroll-view scroll-y="true" style="height:calc(100vh - {{navH}}px);background:#FFF;">
+    <!-- 商铺封面图 -->
+    <view class="header">
+      <view class="shop-avatar"><image src="https://wx.qlogo.cn/mmopen/vi_32/ASibpicOR5AAbAoX0AcqKnoicXPAxjSzCEpm8MZ0uqxSbhxEiaicQtic7icl7nSibPYq6foTSrQjlxxg7BvLcDfYBQwMIQ/132"></image></view>
+      <view style="display:inline-block;width:480rpx;">
+        <view style="margin-bottom:10rpx;">
+          <text style="font-weight:bold;">{{"商铺名称"}}</text>
+        </view>
+        <view style="margin-bottom:37rpx;">
+          <view class="star-images">
+            <image wx:for="{{4}}" src="" class="stars"></image>
+          </view>
+          <text style="font-size:24rpx;color:#FFFFFF;"> {{4}}分</text>
+          <view class="fengexian">|</view>
+          <view class="distance">{{0.01}}km</view>
+          <view class="location">{{"潍坊市面积大但就是不给你五连坐的沙雕网吧隔壁"}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 两个按钮 -->
+    <view class="btns">
+      <view class="btn {{show==0?'active-btn':''}}" bindtap="changeShow" style="text-align:right;margin-right:35rpx;"><text>全部商品</text></view>
+      <view class="btn {{show==1?'active-btn':''}}" bindtap="changeShow" style="text-align:left;margin-left:35rpx;"><text>商家信息</text></view>
+    </view>
+    <block wx:if="{{show==0}}">
+      <!-- 左侧分类列表 -->
+      <view class="type-list">
+        <view class="type" wx:for="{{typeList}}" wx:for-index="index" data-href="{{'type' + index}}" bindtap="choooseType">{{"水果" + index}}</view>
+      </view>
+      <!-- 商品 -->
+      <view class="product-list">
+        <scroll-view scroll-y="true" style="height:940rpx;background:#FFF;width:640rpx;" scroll-into-view="{{selectedType}}">
+          <block wx:for="{{typeList}}" wx:for-key="tl" wx:for-item="item" wx:for-index="index">
+            <view class="group" id="{{'type' + index}}">{{'水果' + index}}</view>
+            <view wx:for="{{productList[index]}}" wx:for-key="pro" wx:for-index="pnumber" wx:for-item="product" class="product-view">
+              <view class="product-image"><image src="https://wx.qlogo.cn/mmopen/vi_32/ASibpicOR5AAbAoX0AcqKnoicXPAxjSzCEpm8MZ0uqxSbhxEiaicQtic7icl7nSibPYq6foTSrQjlxxg7BvLcDfYBQwMIQ/132"></image></view>
+              <view class="product-info">
+                <view class="product-name">{{"马桶盖子"}}</view>
+                <view class="sale-count">月售{{45}}</view>
+                <view style="float:right;" catchtap="addToCart" data-id="{{product.productId}}"><image class="gwc-btn" src="../../img/gwc.png"></image></view>
+                <view class="price-detail">
+                  <view class="real-price">￥{{244.98}}</view>
+                  <view class="price">{{258.88}}</view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+
+      <!-- 底部购物车和订单信息 -->
+      <view class="order-detail">
+        <view class="chat" bindtap="toChat">
+          <image src="../../img/dianhua.png" style="width:60rpx;height:60rpx;vertical-align: middle;"></image><view class="text">联系商家</view>
+        </view>
+        <view class="gwc-info" bindtap="showCart"><image src="../../img/gwc.png" class="icon"></image><view class="cart-num">{{2}}</view></view>
+        <view class="total-price">￥<text style="font-size:64rpx;">{{420.08}}</text></view>
+        <view class="toPay">去结算</view>
+      </view>
+
+      <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+        <view class="modals-cancel" bindtap="hideCart"></view>
+        <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+          <view style="text-align:right;" bindtap="hideCart"><image src="../../img/close_red.png" class="close-icon"></image></view>
+          <view style="text-align:right;margin-top:25rpx;font-size:30rpx;" bindtap="clearCart">删除全部</view>
+          <!-- 购物车列表 -->
+          <scroll-view scroll-y="true" style="height:580rpx;background:#FFF;width:670rpx;margin-left:40rpx;">
+            <view wx:for="{{cartList}}" class="cart-pro" wx:for-key="cp">
+              <view class="pro-image">
+                <image src="https://wx.qlogo.cn/mmopen/vi_32/ASibpicOR5AAbAoX0AcqKnoicXPAxjSzCEpm8MZ0uqxSbhxEiaicQtic7icl7nSibPYq6foTSrQjlxxg7BvLcDfYBQwMIQ/132"></image>
+              </view>
+              <view class="cart-pro-info">
+                <view class="cart-pro-name">{{"马桶盖子"}}</view>
+                <view class="price-detail">
+                  <view class="real-price">￥{{244.98}}</view>
+                  <view class="price">{{258.88}}</view>
+                </view>
+              </view>
+              <view class="cart-pro-num">
+                <view class="count-extra">
+                  <view class="sub" bindtap="subNum" data-index="{{index}}">-</view>
+                  <view class="count">{{5}}</view>
+                  <view class="add" bindtap="addNum" data-index="{{index}}">+</view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </block>
+
+    <block wx:if="{{show==1}}">
+      <view class="shop-detail-view">
+        <view class="shop-position" bindtap="goMap">
+          <image src="../../img/turn_right.png" class="turn-right"></image>
+          <image src="../../img/position.png" class="icon-pic"></image>
+          <view class="item-text">
+            <view>{{"潍坊市滨海经济开发区央子街道固堤"}}</view>
+          </view>
+        </view>
+
+        <view class="shop-phone" bindtap="">
+          <image src="../../img/turn_right.png" class="turn-right"></image>
+          <image src="../../img/dianhua.png" class="icon-pic"></image>
+          <view class="item-text">
+            <view>{{18223272011}}</view>
+          </view>
+        </view>
+
+        <view class="shop-time">
+          <image src="../../img/clock.png" class="icon-pic"></image>
+          <view class="item-text">
+            <view>{{"8:00-22:00"}}</view>
+          </view>
+        </view>
+
+        <view class="shop-show">
+          <image src="../../img/list.png" class="icon-pic"></image>
+          <view class="item-text">
+            <view>{{"商户介绍"}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    </scroll-view>
+  </view>
+</view>

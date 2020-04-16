@@ -1,0 +1,74 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">个人中心
+    </view>
+  </view>
+  <view class="personal-center">
+    <view class="right-btn">快速入驻</view>
+    <scroll-view scroll-y="true" style="height:calc(100vh - {{navH}}px - 150rpx);background:#FFF;border-radius:32rpx 32rpx 0 0;">
+    <!-- 基本信息 -->
+      <view class="info">
+        <image src="{{user.avatar}}" class="avatar"></image>
+        <view class="user-detail">
+          <view class="nickname">{{"怎么肥四"}}</view>
+          <view class="tel">{{"13000000000"}}</view>
+          <view wx:if="{{true}}" class="certification-btn" bindtap="goCertification">实名认证</view>
+          <view wx:else class="certification">已实名</view>
+        </view>
+      </view>
+    <!-- 余额会员 -->
+    <view class="balance">
+      <view class="left-view">
+        ￥<text class="money">{{0.06}}</text>
+        <view style="display:inline-block;float:right;">
+          <text>钱包 ></text>
+        </view>
+      </view>
+
+      <view class="right-view">
+        <view class="buyVip-btn"><image src="../../img/vip.png" class="icon-vip"></image>开通会员</view>
+        <view class="vip-tip">不限制发帖条数，不限制聊天条数</view>
+      </view>
+    </view>
+
+    <!-- 其他页面入口 -->
+    <view class="inner-item">
+      <image class="goRight" src="../../img/right.png"></image>
+      <image class="tip-pic" src="../../img/myOrder.png"></image><view class="item-name">我的订单</view>
+    </view>
+
+    <view class="inner-item">
+      <image class="goRight" src="../../img/right.png"></image>
+      <image class="tip-pic" src="../../img/xxlb.png"></image><view class="item-name">消息列表</view>
+    </view>
+
+    <view class="inner-item">
+      <image class="goRight" src="../../img/right.png"></image>
+      <image class="tip-pic" src="../../img/xinxi.png"></image><view class="item-name">我的信息动态</view>
+    </view>
+
+    <view class="inner-item">
+      <image class="goRight" src="../../img/right.png"></image>
+      <image class="tip-pic" src="../../img/party.png"></image><view class="item-name">家庭餐订单</view>
+    </view>
+
+    <view class="inner-item">
+      <image class="goRight" src="../../img/right.png"></image>
+      <image class="tip-pic" src="../../img/myForum.png"></image><view class="item-name">我的帖子</view>
+    </view>
+
+    <view class="inner-item">
+      <image class="goRight" src="../../img/right.png"></image>
+      <image class="tip-pic" src="../../img/rukou.png"></image><view class="item-name">商家入口</view>
+    </view>
+    </scroll-view>
+  </view>
+
+  <view class="bottom-dh">
+    <view class="{{tabbar==0?'tabbar-active':'tabbar'}}" style="margin-left:20rpx;" bindtap="changeTabbar" data-tabbar="0"><text>信息动态</text></view>
+    <view class="{{tabbar==1?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="1"><text>家庭餐</text></view>
+    <view class="{{tabbar==2?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="2"><text>论坛</text></view>
+    <view class="{{tabbar==3?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="3"><text>生活圈</text></view>
+    <view class="{{tabbar==4?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="4"><text>我的</text></view>
+  </view>
+</view>

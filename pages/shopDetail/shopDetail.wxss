@@ -1,0 +1,375 @@
+/* pages/shopDetail/shopDetail.wxss */
+.shop-info{
+  width: 410rpx;
+  display: inline-block;
+  margin-left: 10rpx;
+  height: 213rpx;
+}
+
+.stars{
+  display: inline-block;
+  width: 24rpx;
+  height: 24rpx;
+  margin: 0 5rpx;
+  vertical-align: middle;
+  border: 0.5rpx solid red;
+}
+.star-images, .fengexian, .distance{
+  display: inline-block;
+}
+.fengexian{
+  margin: 0 20rpx;
+}
+.distance{
+  color: #FFFFFF;
+  font-size: 24rpx;
+}
+.location{
+  color: #FFFFFF;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.shop-avatar{
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 76rpx;
+  height: 146rpx;
+  width: 146rpx;
+  margin: 0 20rpx;
+  margin-top: 61rpx;
+}
+
+.header{
+  background-image: url('http://img.zhijiapp.com/zhiji_20191101165830927.jpg');
+  height: 380rpx;
+  color: #FFFFFF;
+}
+
+.btns{
+  display: flex;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.btn{
+  flex: auto;
+  color: rgba(200, 190, 190, 1);
+}
+
+.active-btn text{
+  color: rgba(44, 43, 43, 1);
+  border-bottom: 5rpx solid rgb(227, 28, 33);
+}
+
+.type{
+  border-bottom: 4rpx solid rgba(236,236,236,1);
+  font-size: 30rpx;
+  text-align: center;
+  color: rgba(44, 43, 43, 1);
+  font-weight: bold;
+  width: 100rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+}
+.type-list{
+  display: inline-block;
+  width: 100rpx;
+  vertical-align: top;
+  border-top: 4rpx solid rgba(236,236,236,1);
+}
+
+.product-list{
+  display:inline-block;
+  border-left: 4rpx solid rgba(236,236,236,1);
+  border-top: 4rpx solid rgba(236,236,236,1);
+}
+
+.group{
+  color: rgb(227, 28, 33);
+  height: 82rpx;
+  line-height: 82rpx;
+  border-bottom: 4rpx solid rgba(236,236,236,1);
+  padding-left: 20rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.product-view{
+  padding: 20rpx;
+  height: 137rpx;
+  border-bottom: 4rpx solid rgba(236,236,236,1);
+}
+
+.product-image{
+  border-radius: 6rpx;
+  display: inline-block;
+  width: 135rpx;
+  height: 135rpx;
+  overflow: hidden;
+}
+
+.product-image image{
+  width: 135rpx;
+  height: 135rpx;
+}
+
+.product-info{
+  width: 450rpx;
+  display: inline-block;
+  margin-left: 15rpx;
+}
+.product-name{
+  font-size: 28rpx;
+  color: rgba(44, 43, 43, 1);
+  font-weight: bold;
+}
+
+.gwc-btn{
+  width: 60rpx;
+  height: 60rpx;
+}
+.sale-count{
+  color: rgba(139, 139, 139, 1);
+  font-size: 22rpx;
+  margin-bottom: 12rpx;
+  margin-top: 3rpx;
+}
+.real-price{
+  display: inline-block;
+  color: rgba(227, 28, 33, 1);
+  font-size: 42rpx;
+  margin-right: 30rpx;
+}
+.price{
+  display: inline-block;
+  color: rgba(71, 71, 71, 1);
+  text-decoration:line-through;
+  font-size: 32rpx;
+}
+
+.order-detail{
+  height: 153rpx;
+  width: 750rpx;
+  margin-top: 24rpx;
+  overflow: hidden;
+}
+
+.order-detail view{
+  display: inline-block;
+}
+
+.chat{
+  margin-left: 24rpx;
+  height: 153rpx;
+  font-size: 30rpx;
+  line-height: 153rpx;
+}
+
+
+.gwc-info{
+  margin-left: 38rpx;
+  width: 80rpx;
+  height: 153rpx;
+  position: relative;
+  bottom: 10rpx;
+}
+
+.gwc-info image{
+  width: 80rpx;
+  height: 80rpx;
+  vertical-align: middle;
+}
+
+.cart-num{
+  position: absolute;
+  right: 0;
+  width: 36rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+  color: red;
+  border: 0.5rpx solid red;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.total-price{
+  margin-left: 34rpx;
+  font-family:DINCondensed-Bold,DINCondensed;
+  color: rgba(227, 28, 33, 1);
+  width: 240rpx;
+  text-align: left;
+  height: 153rpx;
+  line-height: 153rpx;
+}
+
+.toPay{
+  color: #FFFFFF;
+  background-color: rgba(227, 28, 33, 1);
+  font-size: 42rpx;
+  height: 153rpx;
+  line-height: 153rpx;
+  width: 150rpx;
+  text-align: center;
+  float: right;
+}
+
+.text{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.turn-right{
+  float: right;
+  width: 66rpx;
+  height: 66rpx;
+}
+
+.icon-pic{
+  width: 60rpx;
+  height: 60rpx;
+}
+.item-text{
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+}
+
+.item-text view{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.shop-position, .shop-phone, .shop-time, .shop-show{
+  padding: 3rpx 0;
+  width: 710rpx;
+  margin: 7rpx 20rpx;
+}
+
+
+
+
+
+
+
+.modals {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.modals-cancel {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bottom-dialog-body {
+  position: absolute;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20rpx;
+  height: 710rpx;
+  background-color: #fff;
+  border-radius: 20rpx 20rpx 0 0;
+}
+/*动画前初始位置*/
+.bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.close-icon{
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.pro-image image{
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.pro-image{
+  border-radius: 6rpx;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.cart-pro{
+  margin-bottom: 35rpx;
+}
+
+.cart-pro-info{
+  width: 540rpx;
+  display: inline-block;
+  height: 130rpx;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.cart-pro-name{
+  color: rgba(71, 71, 71, 1);
+  font-size: 40rpx;
+  margin-bottom: 32rpx;
+  font-weight: bold;
+}
+
+.count-extra{
+  width:150rpx;
+  height:40rpx;
+  border:0.5px solid rgb(227, 28, 33);
+  border-radius:8rpx;
+  color:rgb(227, 28, 33);
+  margin-right: 40rpx;
+  float: right;
+}
+.cart-pro-num{
+  height: 40rpx;
+}
+
+.add, .sub, .count{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.count{
+  width: 70rpx;
+  color: rgb(44, 43, 43);
+  font-size: 25rpx;
+  text-align: center;
+  border-left: 1rpx solid rgb(227, 28, 33);
+  border-right: 1rpx solid rgb(227, 28, 33);
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.add, .sub{
+  width: 39rpx;
+  text-align: center;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+}

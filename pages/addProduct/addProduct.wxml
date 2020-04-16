@@ -1,0 +1,46 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">添加商品
+      <image src='/img/return.png' mode='aspectFit' class='back' bindtap='navBack' style="padding:{{(navLH-16)/2}}px 0;top:{{(navH-48)/2}}rpx;"></image>
+    </view>
+  </view>
+  <view>
+    <view class="item">商品图片</view>
+    <view class="info"><image src="../../img/add.png" bindtap="addImage"></image></view>
+  </view>
+  <view>
+    <view class="item">商品名称</view>
+    <view class="info"><input placeholder="请输入商品名称" bindinput="getTitle"></input></view>
+  </view>
+  <view>
+    <view class="item">商品原价</view>
+    <view class="info"><input placeholder="请输入商品原价" bindinput="getPrice"></input></view>
+  </view>
+  <view>
+    <view class="item">商品现价</view>
+    <view class="info"><input placeholder="请输入商品现价" bindinput="getRealPrice"></input></view>
+  </view>
+  <view>
+    <view class="item">商品库存</view>
+    <view class="info"><input placeholder="请输入商品库存" bindinput="getInventory"></input></view>
+  </view>
+  <view>
+    <view class="item">商品分类</view>
+    <view class="info" bindtap="selectType">
+      <view class='select_box'>
+        <view class='select' catchtap='selectTap'>
+            <text class='select_text'>{{selectType[index]}}</text>
+            <image class='select_img {{selectShow&&"select_img_rotate"}}' src='../../img/add.png' background-size="contain"></image> 
+        </view>
+        <view class='option_box' style='height:{{selectShow?(selectType.length>4?325:selectType.length*50):0}}rpx;z-index:112;'>
+            <text class='option' wx:for='{{selectType}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <button bindtap="addEvent">添加</button>
+  </view>
+  
+</view>

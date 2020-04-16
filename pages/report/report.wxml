@@ -1,0 +1,22 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">举报
+      <image src='/img/return.png' mode='aspectFit' class='back' bindtap='navBack' style="padding:{{(navLH-16)/2}}px 0;top:{{(navH-48)/2}}rpx;"></image>
+    </view>
+  </view>
+  <view>
+    <block wx:for="{{reasonList}}" wx:key="reason" wx:for-index="index">
+      <view bindtap="selectItem" data-index="{{index}}" class="reason">
+        <image wx:if="{{selectList[index]}}" class="select-img" src="/img/emptyStar.png"></image>
+        <image wx:else class="select-img" src="/img/star.png"></image>
+        <view class="title">{{item}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="textarea-view">
+    <textarea placeholder="我有话说" style="display:{{textareaCSS}};" value="{{context}}" bindinput="getContext"></textarea>
+  </view>
+  <view>
+    <button bindtap="reportEvent">提交</button>
+  </view>
+</view>

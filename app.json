@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/party/party",
+    "pages/forum/forum",
+    "pages/lifeCircle/lifeCircle",
+    "pages/personaCenter/personaCenter",
+    "pages/report/report",
+    "pages/accredit/index",
+    "pages/partDetail/partDetail",
+    "pages/publishParty/publishParty",
+    "pages/productManage/productManage",
+    "pages/addProduct/addProduct",
+    "pages/updateProduct/updateProduct",
+    "pages/certification/certification",
+    "pages/shopDetail/shopDetail",
+    "pages/chatroom/chatroom",
+    "pages/chat/chat",
+    "pages/main/main",
+    "pages/logs/logs"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于显示您的所在位置"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  
+  "sitemapLocation": "sitemap.json"
+}

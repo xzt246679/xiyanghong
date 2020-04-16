@@ -1,0 +1,73 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">生活圈
+    </view>
+  </view>
+  <view class="life-circle">
+    <scroll-view scroll-y="true" style="height:calc(100vh - {{navH}}px - 150rpx);background:#FFF;border-radius:32rpx 32rpx 0 0;">
+    <!-- 轮播图 -->
+      <swiper autoplay="true" indicator-dots="true">
+        <swiper-item>
+          <image wx:for="{{banner}}" src="{{item.pic}}" wx:key="pic"></image>
+        </swiper-item>
+      </swiper>
+      <!-- 商家入驻的广告推荐 -->
+      <view>
+        <image class="tenants-adv" src=""></image>
+      </view>
+      <!-- 两个按钮 -->
+      <view class="btns">
+        <view class="btn {{show==0?'active-btn':''}}" bindtap="changeShow" style="text-align:right;margin-right:35rpx;"><text>精选商品</text></view>
+        <view class="btn {{show==1?'active-btn':''}}" bindtap="changeShow" style="text-align:left;margin-left:35rpx;"><text>优质商家</text></view>
+      </view>
+      <block wx:if="{{show==0}}">
+        <!-- 商品 -->
+        <view class="products">
+          <view wx:for="{{product}}" class="product" style="{{index%2!=0?'float:right;':''}}">
+            <image src="" class="product-pic"></image>
+            <view class="title">狗屎味儿的巧克力  一口一个它真的巨香</view>
+            <view class="detail">
+              <view class="sales">销量：558</view>
+              <view class="price">￥78.00</view>
+            </view>
+            <view class="shop">
+              <image src="../../img/gwc.png" class="icon" style="float:right;"></image>
+              <image src="../../img/shopIcon.png" class="icon"></image>
+              <view class="shop-name">套嫩猴子的商店</view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="shops">
+          <view wx:for="{{2}}" wx:key="s" wx:for-index="index" class="shop-detail" bindtap="intoShop" data-id="{{item.id}}">
+            <view class="shop-img"><image src=""></image></view>
+            <view class="shop-info">
+              <view style="height:60rpx;line-height:60rpx;margin-bottom:3rpx;">
+                <image class="icon" src="../../img/shopIcon.png" style="width:60rpx;height:60rpx;"></image>
+                <text style="font-weight:bold;">{{"商铺名称"}}</text>
+              </view>
+              <view style="margin-bottom:37rpx;">
+                <view class="star-images">
+                  <image wx:for="{{4}}" src="" class="stars"></image>
+                </view>
+                <text style="font-size:24rpx;color:rgb(44, 43, 43);"> {{4}}分</text>
+              </view>
+              <view class="distance">{{0.01}}km</view>
+              <view class="read">{{1154}}浏览</view>
+              <view class="location">{{"潍坊市至尊就是不给你五连坐的沙雕网吧隔壁"}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="publish-btn" bindtap="goShoppingCart"><image src="../../img/logo.jpg"></image></view>
+  </view>
+  <view class="bottom-dh">
+    <view class="{{tabbar==0?'tabbar-active':'tabbar'}}" style="margin-left:20rpx;" bindtap="changeTabbar" data-tabbar="0"><text>信息动态</text></view>
+    <view class="{{tabbar==1?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="1"><text>家庭餐</text></view>
+    <view class="{{tabbar==2?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="2"><text>论坛</text></view>
+    <view class="{{tabbar==3?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="3"><text>生活圈</text></view>
+    <view class="{{tabbar==4?'tabbar-active':'tabbar'}}" bindtap="changeTabbar" data-tabbar="4"><text>我的</text></view>
+  </view>
+</view>

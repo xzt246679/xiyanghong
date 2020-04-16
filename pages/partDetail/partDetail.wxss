@@ -1,0 +1,70 @@
+/* pages/partDetail/partDetail.wxss */
+.avatar{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.banner{
+  width: 100%;
+  height: 100px;
+}
+
+.username{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 16rpx;
+}
+
+.phone{
+  float: right;
+  margin-top: 49rpx;
+}
+
+.detail{
+  margin: 0 auto;
+  width: 710rpx;
+}
+
+.share{
+  float: right;
+}
+
+.detail-view{
+  margin-top: 13rpx;
+}
+
+.other-detail{
+  width: 710rpx;
+  margin: 0 auto;
+  margin-top: 94rpx;
+}
+
+.banner{
+  width: 710rpx;
+  height: 400rpx;
+  margin: 10rpx auto;
+}
+
+.address{
+  color: #A0A0A0;
+  font-size: 15px;
+  margin-top: 10rpx;
+}
+
+.times{
+  margin-top: 12rpx;
+  color: #979797;
+  font-size: 14px;
+}
+
+.pay-btn{
+  background: -webkit-repeating-linear-gradient(left,#E8472F,#E31B20);
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 45rpx auto;
+  color: #FFF;
+  border-radius: 45rpx;
+  width: 710rpx;
+}

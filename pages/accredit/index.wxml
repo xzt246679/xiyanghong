@@ -1,0 +1,22 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">微信授权
+     
+    </view>
+  </view>
+  <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px);background: #F4F5F7;' scroll-y >
+        <view class='header'>
+            <image src='/img/logo.jpg'></image>
+        </view>
+
+        <view class='content'>
+            <view>申请获取以下权限</view>
+            <text>获得你的公开信息(昵称，头像等)</text>
+        </view>
+
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>
+        <!-- <button class="cu-btn bg-blue margin-tb-xs lg"  hidden="{{hid2}}"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >进入</button>  -->
+  </scroll-view>
+</view>

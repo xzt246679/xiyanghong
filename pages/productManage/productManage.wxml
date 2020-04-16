@@ -1,0 +1,41 @@
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px;'>
+    <view class='nav-title' style="background:#E31C21;color:#FFF;font-size:30rpx;height: {{navLH}}px;line-height: {{navLH}}px;top: {{navT+1}}px;">商品管理
+      <image src='/img/return.png' mode='aspectFit' class='back' bindtap='navBack' style="padding:{{(navLH-16)/2}}px 0;top:{{(navH-48)/2}}rpx;"></image>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" style="height:calc(100vh - {{navH}}px);" bindscrolltolower="getPagerEvent">
+    <view class="search-view">
+      <input type="text" placeholder="搜索"></input>
+      <button bindtap="toAddProduct">添加商品</button>
+    </view>
+
+    <view class="product-list">
+      <block wx:for="{{pagerArrs}}" wx:for-item="productList">
+        <block wx:for="{{productList}}" wx:key="pro" wx:for-index="index">
+          <view class="product">
+            <view class="extra">
+              <view class="extra-btn" data-product="{{item.productId}}" bindtap="toUpdateProduct">编辑</view>
+              <view wx:if="{{true}}" class="extra-btn" data-product="{{item.productId}}" bindtap="changeStatus">上架</view>
+              <view wx:else class="extra-btn" data-product="{{item.productId}}" bindtap="changeStatus">下架</view>
+              <view class="extra-btn" data-product="{{item.productId}}" bindtap="delProduct">删除</view>
+            </view>
+            <view class="product-info">
+              <view class="detail">
+                <view class="title">红富士苹果</view>
+                <view class="inventory">库存:{{254}}</view>
+                <view class="price">现价:{{18}}</view>
+                <view class="real-price">原价:{{22}}</view>
+              </view>
+              <view class="image">
+                <image src=""></image>
+              </view>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
+    <view class="loading" hidden="{{!getLoding}}">正在载入更多...</view>  
+    <view class="loading complete" hidden="{{!getLodingComplate}}">已加载全部</view>
+  </scroll-view>
+</view>
